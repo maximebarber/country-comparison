@@ -20,6 +20,6 @@ export class CountryService {
   constructor(private http: HttpClient) {}
 
   getCountry(): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}austria`, httpOptions);
+    return this.http.get<any>(`${this.apiUrl}france`, httpOptions);
   }
 }
