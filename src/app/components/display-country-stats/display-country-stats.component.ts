@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { CountryService } from '../../services/country.service';
+import { Component, Input, OnInit } from '@angular/core';
+import { Country } from '../../Country';
 
 @Component({
   selector: 'app-display-country-stats',
@@ -7,22 +7,9 @@ import { CountryService } from '../../services/country.service';
   styleUrls: ['./display-country-stats.component.css'],
 })
 export class DisplayCountryStatsComponent {
-  @Input() country!: any;
-
-  constructor(private countryService: CountryService) {}
-  //country: any = {};
+  @Input() two!: Country;
 
   ngOnInit(): void {
-/*     this.countryService.getCountry().subscribe((country) => {
-
-          for ( var property in country ) {
-            console.log( property ); 
-          }
-      const topLevelDomain = Object.keys(country)[0]
-      console.log(topLevelDomain)
-      console.log('country: ', country[topLevelDomain]);
-      this.country = country[topLevelDomain];
-      console.log("🚀 ~ file: display-country-stats.component.ts:24 ~ DisplayCountryStatsComponent ~ this.countryService.getCountry ~ this.country:", this.country)
-    }); */
+    //console.log("display country stats: ", this.one)
   }
 }

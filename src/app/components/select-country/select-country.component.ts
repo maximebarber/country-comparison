@@ -6,7 +6,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./select-country.component.css']
 })
 export class SelectCountryComponent {
-  @Output() onSelectCountry: EventEmitter<any> = new EventEmitter();
+  @Output() onSelectCountry: EventEmitter<string> = new EventEmitter();
 
   text!: string;
   onSubmit() {
