@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Country } from '../../Country';
 
 @Component({
@@ -7,9 +7,5 @@ import { Country } from '../../Country';
   styleUrls: ['./display-country-stats.component.css'],
 })
 export class DisplayCountryStatsComponent {
-  @Input() two!: Country;
-
-  ngOnInit(): void {
-    //console.log("display country stats: ", this.one)
-  }
+  @Input() country!: Country;
 }

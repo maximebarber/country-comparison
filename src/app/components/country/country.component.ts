@@ -9,12 +9,12 @@ import { Country, emptyCountry } from '../../Country';
 })
 export class CountryComponent {
   constructor(private countryService: CountryService) {}
-  one: Country = emptyCountry;
+  country: Country = emptyCountry;
 
-  selectCountry(testy: string) {
-    this.countryService.getCountry(testy).subscribe((country) => {
-      const topLevelDomain = Object.keys(country)[0];
-      this.one = country[topLevelDomain];
+  selectCountry(selectedCountry: string) {
+    this.countryService.getCountry(selectedCountry).subscribe((countryRetrieved) => {
+      const topLevelDomain = Object.keys(countryRetrieved)[0];
+      this.country = countryRetrieved[topLevelDomain];
     });
   }
 }

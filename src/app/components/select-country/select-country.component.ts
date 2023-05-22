@@ -8,9 +8,9 @@ import { Component, Output, EventEmitter } from '@angular/core';
 export class SelectCountryComponent {
   @Output() onSelectCountry: EventEmitter<string> = new EventEmitter();
 
-  text!: string;
+  selectedCountry!: string;
   onSubmit() {
-    console.log("this.text: ", this.text)
-    this.onSelectCountry.emit(this.text);
+    this.onSelectCountry.emit(this.selectedCountry);
+    this.selectedCountry = '';
   }
 }
