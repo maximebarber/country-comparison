@@ -126,6 +126,10 @@ export interface CountryWithTopLevelDomain {
   };
 };
 
+export type AllCountries = {
+  [key: string]: CountryWithTopLevelDomain;
+};
+
 export const emptyCountry: Country = {
   name: '',
   official_name: '',

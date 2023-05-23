@@ -1,7 +1,26 @@
-<form (ngSubmit)="onSubmit()">
-  <div>
-    <label for="selectedCountry">Country</label>
-    <input type="text" name="selectedCountry" [(ngModel)]="selectedCountry" id="selectedCountry" placeholder="Select country">
-  </div>
-  <input type="submit" value="Select" class="btn btn-block">
+<form>
+  <mat-form-field>
+    <input
+      type="text"
+      placeholder="Country"
+      matInput
+      [formControl]="countryControl"
+      [matAutocomplete]="auto"
+      name="selectedCountry"
+      [(ngModel)]="selectedCountry"
+      id="selectedCountry"
+    />
+
+    <mat-autocomplete
+      #auto="matAutocomplete"
+      (optionSelected)="onCountrySelected($event)"
+    >
+      <mat-option
+        *ngFor="let country of filteredCountries | async"
+        [value]="country"
+      >
+        {{ country }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
 </form>

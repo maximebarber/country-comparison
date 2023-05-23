@@ -1,0 +1,12 @@
+.country {
+  width: calc(50% - 20px); /* Adjust the width and margin as needed */
+  height: 200px; /* Adjust the height as needed */
+  margin: 10px; /* Adjust the margin as needed */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 600px) {
+  .country {
+    width: calc(100% - 20px); /* Adjust the width and margin as needed */
+  }
+}
